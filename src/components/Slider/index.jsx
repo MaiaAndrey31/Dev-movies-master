@@ -1,6 +1,7 @@
 import { Swiper, SwiperSlide } from 'swiper/react'
 
-import { Container } from './styles'
+import Card from '../Cards'
+import { Container } from './style'
 
 function Slider({ info, title }) {
   return (
@@ -8,13 +9,13 @@ function Slider({ info, title }) {
       <h2>{title}</h2>
       <Swiper
         grabcursor
-        spaceBetween={10}
+        spaceBetween={15}
         slidePerView={'auto'}
         className="swiper"
       >
         {info.map((item, index) => (
           <SwiperSlide key={index}>
-            <div>{item.original_title}</div>
+            <Card item={item} />
           </SwiperSlide>
         ))}
       </Swiper>
