@@ -1,6 +1,7 @@
 import styled from 'styled-components'
 
 export const Container = styled.div`
+  min-height: 100px;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -8,6 +9,8 @@ export const Container = styled.div`
   position: fixed;
   padding: 10px 50px;
   top: 0;
+  background-color: ${(props) => (props.changeBG ? '#000000' : 'transparent')};
+  transition: background-color 0.8s ease-in-out;
   img {
     width: 25%;
   }
@@ -22,7 +25,7 @@ export const Menu = styled.ul`
 export const Li = styled.li`
   font-weight: 600;
   cursor: pointer;
-  font-size: 30px;
+  font-size: 26px;
   position: relative;
 
   a {

@@ -1,13 +1,23 @@
+import { useState } from 'react'
 import { Link, useLocation } from 'react-router-dom'
 
 import Logo from '../../assets/logo.png'
 import { Container, Menu, Li } from './style'
 
 function Header() {
+  const [changeBG, setChangeBG] = useState(false)
   const { pathname } = useLocation()
 
+  window.onscroll = () => {
+    if (!changeBG && window.pageYOffset > 150) {
+      setChangeBG(true)
+    }
+    if (changeBG && window.pageYOffset <= 150) {
+      setChangeBG(false)
+    }
+  }
   return (
-    <Container>
+    <Container changeBG={changeBG}>
       <img src={Logo} />
       <Menu>
         <Li isActive={pathname === '/'}>

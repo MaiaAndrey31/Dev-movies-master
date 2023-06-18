@@ -1,13 +1,14 @@
-import { ButtonRed, ButtonWhite }  from "./style"
+import { ButtonRed, ButtonWhite } from './style'
 
-function Button({ children, red }){
-
-    return (
-        <> 
-        {red ? (<ButtonRed>{children}</ButtonRed>) : ( <ButtonWhite>{children}</ButtonWhite>)}
-    
-   
+function Button({ children, red, ...rest }) {
+  return (
+    <>
+      {red ? (
+        <ButtonRed {...rest}>{children}</ButtonRed>
+      ) : (
+        <ButtonWhite {...rest}>{children}</ButtonWhite>
+      )}
     </>
-    )
+  )
 }
-export default Button 
+export default Button
