@@ -10,6 +10,9 @@ outline: none;
 text-decoration: none;
 font-family: 'Montserrat', sans-serif;
 }
+::-webkit-scrollbar {
+    display: none;
+}
 
 body {
     background-color: #000000;
