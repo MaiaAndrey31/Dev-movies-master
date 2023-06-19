@@ -9,7 +9,7 @@ export const Title = styled.h4`
 export const Container = styled.div`
   display: flex;
   margin-top: 30px;
-  gap: 10px;
+  gap: 15px;
   div {
     display: flex;
     flex-direction: column;
