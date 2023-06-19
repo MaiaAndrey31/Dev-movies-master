@@ -4,7 +4,8 @@ function SpanGenres({ genres }) {
   console.log(genres)
   return (
     <Container>
-      <div></div>
+      {genres &&
+        genres.map((genre) => <span key={genre.id}>{genre.name}</span>)}
     </Container>
   )
 }
